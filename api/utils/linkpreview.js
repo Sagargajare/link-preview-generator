@@ -57,10 +57,17 @@ const getImage = async (html) => {
   if (twtimg.length > 0) {
     return twtimg.attr("content");
   }
-
+  
   if ($('link[rel="image_src"]').length > 0) {
-    domain = $('link[rel="image_src"]').attr("href");
+    return $('link[rel="image_src"]').attr("href");
   }
+  if ($('link[rel="icon"]').length > 0) {
+    return $('link[rel="icon"]').attr("href");
+  }
+  if ($('img').length > 0) {
+    return $('img').attr("src");
+  }
+
 
   return null;
 };
