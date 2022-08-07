@@ -41,7 +41,7 @@ export default function Home() {
     
   };
   return (
-    <div className="container">
+    <div className="">
       <Head>
         <title>Next Link Previewer</title>
         <link rel="icon" href="/favicon.ico" />
